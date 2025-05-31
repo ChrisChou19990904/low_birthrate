@@ -31,9 +31,29 @@
         em {
             color: #555;
         }
+        #google_translate_element {
+            top: 10px;  /* 距離頁面頂端 10px */
+            left: 10px; /* 距離頁面左側 10px */
+            z-index: 9999; /* 保證它不會被其他元素遮蓋 */
+        }
     </style>
 </head>
 <body>
+<div id="google-translate-box">
+    <div id="google_translate_element"></div>
+    <!-- Google Translate 的自動翻譯功能 -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'zh-TW',  // 頁面原語言
+                includedLanguages: 'en,es,fr,de,it,zh-CN,ja,ko,th,vi,my,id,ms,ar,he,ru,tg,uk,hi,tr,pt,nl,is,fi,sv,no,ro,kk,bo,mn,la,fil,tl,el',  // 支援的翻譯語言（可擴展）
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <p>點擊上方的語言選單以切換語言</p>
+</div>
 <h1>當動物拒絕繁殖：一場對文明的無聲反抗</h1>
 <p>在現代畜牧業中，動物的出生、繁殖與死亡不再是自然的過程，而是一套被精確控制的機械系統。人類圈養牲畜、安排牠們交配生育，等下一代出生後，便將牠們的父母送往屠宰場。這一切只是為了讓人類有源源不絕的食物可食，而非出自對動物痛苦的同理與尊重。</p>
 <p>然而，當我們靜靜凝視這一套制度，會發現：這不只是對動物的冷酷安排，更是對人類社會價值觀的赤裸揭露。</p>
@@ -68,7 +88,7 @@
         <source src="少子化.mp4" type="video/mp4">
     </video>
 </div>
-<h2>五、政客不生自己，卻叫人民生</h2>
+<h2>五、政客自己不生孩子，卻鼓勵人民生</h2>
 <p>更可笑的是，有些政客自己根本不生孩子，因為他們非常清楚：在這樣一個缺乏保障、托育困難、醫療與教育資源不均的社會裡，生育只會讓人經濟壓力爆表、精神崩潰。</p>
 <p>但他們卻不斷告訴人民：「生孩子是對國家的貢獻」、「要為了民族的未來努力繁衍」、「生育是光榮的責任」。</p>
 <p><strong>這不是矛盾，是計算。</strong>他們不是真的希望你幸福，只是希望有更多「韭菜」可以收割：孩子長大後要交稅、當兵、成為勞工——維持體制，讓他們的生活品質不變。</p>
